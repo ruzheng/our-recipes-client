@@ -13,7 +13,7 @@ This light program allows the user to store their character units from the game 
 
 ## Planning Story
 
- TBA
+First step on front end is to create a workable authentication. Able to create, sign-in, change password, and sign out function.
 
 ### User Stories
 

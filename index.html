@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Genshin Character Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,50 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>Genshin Unit</h1>
+      <h3>Sign Up</h3>
+      <form id="sign-up-form">
+        <input name="credentials[email]" type="email" placeholder="Enter Your Email">
+        <input name="credentials[password]" type="password" placeholder="Enter Password">
+        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+        <button type="submit">Join</button>
+      </form>
+      
+      <h3>Sign In</h3>
+      <form id="sign-in-form">
+        <input name="credentials[email]" type="email" placeholder="Email address here">
+        <input name="credentials[password]" type="password" placeholder="Password here">
+      
+        <button type="submit">Sign In</button>
+      </form>
+
+      <h3>Change Password</h3>
+      <form id="change-pw-form">
+        <input name="passwords[old]" type="password" placeholder="Old password">
+        <input name="passwords[new]" type="password" placeholder="New password here">
+        <button type="submit">Change Password</button>
+      </form>
+
+      <h3>Sign Out</h3>
+      <button id="sign-out-button">Sign Out</button>
+
+      <div id="unit-input-box">
+        <form id="unit-input-form">
+          <h6>Unit Name</h6>
+          <input name="name" type="text" placeholder="Name">
+          <h6>Unit's Element: Pyro, Hydro, Electro, Anemo, Geo, or Cryo</h6>
+          <input name="element" type="text" placeholder="Element">
+          <h6>Unit's Rarity</h6>
+          <input name="rarity" type="text" placeholder="4 or 5 stars">
+          <h6>Unit's Region: Mondstadt, Liyue, or Inazuma</h6>
+          <input name="region" type="text" placeholder="1 of the 3 region">
+          <p></p>
+          <button type="submit">Submit</button>
+        </form>
+
+
+      </div>
+
+      <section id="auth-display"></section>
     </body>
 </html>

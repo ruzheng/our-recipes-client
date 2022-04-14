@@ -1,19 +1,62 @@
 // requires
 // const store = require('../store.js')
-const authApi = require('./api.js')
-const authUi = require('./ui.js')
+// const authApi = require('./api.js')
+const unitUi = require('./ui.js')
+const unitApi = require('./api.js')
+
 const getFormFields = require('../../lib/get-form-fields.js')
 
-const onCreate = function (event) {
+const onUnitsIndex = () => {
+  unitApi
+    .indexUnits()
+    .then((response) => unitUi.onIndexUnitsSuccess(response))
+    .catch(() => unitUi.onIndexUnitsFailure())
+}
+
+const onUnitCreate = function (event) {
   event.preventDefault()
-  console.log('Unit Created')
   const data = getFormFields(event.target)
-  authApi
+  console.log(data)
+  unitApi
     .createUnit(data)
-    .then(() => authUi.onCreateSuccess())
-    .catch(() => authUi.onCreateFailure())
+    .then(() => unitUi.onUnitCreateSuccess())
+    .catch(() => unitUi.onUnitCreateFailure())
+
+  onUnitsIndex()
+}
+
+const onUnitUpdate = function (event) {
+  event.preventDefault()
+
+  const updateForm = event.target
+  const unitId = $(updateForm).data('id')
+  const data = getFormFields(updateForm)
+  console.log(unitId)
+  // const data = getFormFields(event.target)
+  // data.book.id = bookId
+  // console.log('what is going on here?' + data)
+  unitApi
+    .updateUnit(data, unitId)
+    .then(() => unitUi.onUpdateUnitSuccess())
+    .then(onUnitsIndex)
+    .catch(() => unitUi.onUpdateUnitFailure())
+}
+
+const onUnitDelete = function (event) {
+  const deleteButton = event.target
+
+  const bookId = $(deleteButton).data('id')
+
+  unitApi
+    .deleteUnit(bookId)
+    .then(() => unitUi.onDeleteUnitSuccess())
+    .then(onUnitsIndex)
+    .catch(() => unitUi.onDeleteUnitFailure())
 }
 
 module.exports = {
-  onCreate
+  onUnitCreate,
+  onUnitsIndex,
+  onUnitUpdate,
+  onUnitDelete
 }

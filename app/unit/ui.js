@@ -27,11 +27,11 @@ const onIndexUnitsSuccess = function (response) {
                         Rarity: ${unit.rarity} <br>
                         Region: ${unit.region}</p>
                         <form class='update-unit' data-id=${unit._id}>
-                            <input name="name" type="text" placeholder="Name">
-                            <input name="element" type="text" placeholder="Element">
-                            <input name="rarity" type="text" placeholder="Rarity">
-                            <input name="region" type="text" placeholder="Region">
-                            <button type="submit">Update Unit</button>
+                            <input name="unit[name]" type="text" placeholder="Name">
+                            <input name="unit[element]" type="text" placeholder="Element">
+                            <input name="unit[rarity]" type="text" placeholder="Rarity">
+                            <input name="unit[region]" type="text" placeholder="Region">
+                            <button type="unit[submit]">Update Unit</button>
                         </form>
                          <button class='delete-unit' data-id=${unit._id}>Delete Unit</button>
                       </div>
@@ -42,23 +42,23 @@ const onIndexUnitsSuccess = function (response) {
 }
 
 const onIndexUnitsFailure = function () {
-  $('#auth-display').text('There was an error')
+  $('#resource-response').text('There was an error')
 }
 
 const onUpdateUnitSuccess = function () {
-  $('#auth-display').html('Unit updated')
+  $('#resource-response').html('Unit updated')
 }
 
 const onUpdateUnitFailure = function () {
-  $('#auth-display').text('Failure to update unit')
+  $('#resource-response').text('Failure to update unit')
 }
 
 const onDeleteUnitSuccess = function () {
-  $('#auth-display').text('Unit deleted')
+  $('#resource-response').text('Unit deleted')
 }
 
 const onDeleteUnitFailure = function () {
-  $('#auth-display').text('Failure to delete Unit')
+  $('#resource-response').text('Failure to delete Unit')
 }
 
 module.exports = {

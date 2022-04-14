@@ -1,6 +1,8 @@
 # Genshin Unit Tracker API
 
-This light program allows the user to store their character units from the game Genshin Impact. Each unit comes with a variety of additional information that will be added as the app updates. 
+This is the front-end of Genshin Unit-Tracker
+
+This light program allows the user to store their character units from the game Genshin Impact. Each unit contain information regarding to the unit itself such as name, element, rarity, and region. The goal is to allow the user to have an index of character/units they own in the game and in later version allow the user to attach weapon and artifacts(equipments) to each character.
 
 ## Important Links
 
@@ -13,7 +15,13 @@ This light program allows the user to store their character units from the game 
 
 ## Planning Story
 
-First step on front end is to create a workable authentication. Able to create, sign-in, change password, and sign out function.
+ 1. Create a workable authentication. Able to create, sign-in, change password, and sign out function.
+ 2. Create a form that allows the user to add their unit from the game .
+ 3. Add the feature to allow user to delete or change the unit's information. 
+ 4. Rework HTML to allow show/hide function when targeting specific event button.
+ 5. Start designing the layout of the app to match the Wireframe.
+ 6. If time's allows, add a show unit feature and or Unit's attack moves or weapon resource.
+ 7. Deploy
 
 ### User Stories
 

@@ -12,54 +12,65 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Genshin Unit</h1>
-      <h3>Sign Up</h3>
-      <form id="sign-up-form">
-        <input name="credentials[email]" type="email" placeholder="Enter Your Email">
-        <input name="credentials[password]" type="password" placeholder="Enter Password">
-        <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
-        <button type="submit">Join</button>
-      </form>
-      
-      <h3>Sign In</h3>
-      <form id="sign-in-form">
-        <input name="credentials[email]" type="email" placeholder="Email address here">
-        <input name="credentials[password]" type="password" placeholder="Password here">
-      
-        <button type="submit">Sign In</button>
-      </form>
+      <div id="start-form">
+        <h1>Genshin Unit Tracker</h1>
+        <p>Hello Traveler of Tyvet, this is a Genshin unit tracker app that allows you to store your unit!</p>
+        <p>Sign up to start!</p>
+        <button id="sign-up-button">Sign-Up</button>     
+        <form id="sign-up-form">
+          <h3>Sign Up</h3>
+          <input name="credentials[email]" type="email" placeholder="Enter Your Email">
+          <input name="credentials[password]" type="password" placeholder="Enter Password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+          <button type="submit">Join</button>
+        </form>
 
-      <h3>Change Password</h3>
-      <form id="change-pw-form">
-        <input name="passwords[old]" type="password" placeholder="Old password">
-        <input name="passwords[new]" type="password" placeholder="New password here">
-        <button type="submit">Change Password</button>
-      </form>
-
-      <h3>Sign Out</h3>
-      <button id="sign-out-button">Sign Out</button>
+        <p>Have an account already? Login here.</p>
+        <button id="login-button">Login</button>
+        
+        <form id="sign-in-form">
+          <h3>Sign In</h3>
+          <input name="credentials[email]" type="email" placeholder="Email address here">
+          <input name="credentials[password]" type="password" placeholder="Password here">
+          <button type="submit">Enter</button>
+        </form>
+      </div>
+      
 
       <section id="auth-display"></section>
 
-      <div id="unit-input-box">
-        <form id="unit-input-form">
-          <h6>Unit Name</h6>
-          <input name="name" type="text" placeholder="Name">
-          <h6>Unit's Element: Pyro, Hydro, Electro, Anemo, Geo, or Cryo</h6>
-          <input name="element" type="text" placeholder="Element">
-          <h6>Unit's Rarity</h6>
-          <input name="rarity" type="text" placeholder="4 or 5 stars">
-          <h6>Unit's Region: Mondstadt, Liyue, or Inazuma</h6>
-          <input name="region" type="text" placeholder="1 of the 3 region">
-          <p></p>
-          <button type="submit">Submit</button>
+      <div id="body-resource">
+        <h3>Change Password</h3>
+        <form id="change-pw-form">
+          <input name="passwords[old]" type="password" placeholder="Old password">
+          <input name="passwords[new]" type="password" placeholder="New password here">
+          <button type="submit">Change Password</button>
         </form>
+        <h3>Sign Out</h3>
+        <button id="sign-out-button">Sign Out</button>
+        <div id="unit-input-box">
+          <form id="unit-input-form">
+            <h6>Unit Name</h6>
+            <input name="unit[name]" type="text" placeholder="Name">
+            <h6>Unit's Element: Pyro, Hydro, Electro, Anemo, Geo, or Cryo</h6>
+            <input name="unit[element]" type="text" placeholder="Element">
+            <h6>Unit's Rarity</h6>
+            <input name="unit[rarity]" type="text" placeholder="4 or 5 stars">
+            <h6>Unit's Region: Mondstadt, Liyue, or Inazuma</h6>
+            <input name="unit[region]" type="text" placeholder="1 of the 3 region">
+            <p></p>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+
+        <section id="resource-response"></section>
+        <button id="get-units">My Units</button>
+        
+        <section id="unit-display"></section>
       </div>
       <p></p>
 
-      <button id="get-units">Your Units</button>
       
-      <section id="unit-display"></section>
 
      
     </body>

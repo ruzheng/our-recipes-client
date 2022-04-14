@@ -8,7 +8,7 @@ const createUnit = function (data) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: { unit: data }
+    data
   })
 }
 
@@ -31,7 +31,7 @@ const updateUnit = function (data, id) {
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
-    data: { unit: data }
+    data
   })
 }
 

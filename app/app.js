@@ -6,8 +6,13 @@ const unitEvents = require('./unit/events')
 // require('./example')
 
 $(() => {
+  $('#sign-up-form').hide()
+  $('#sign-up-button').on('click', () => { $('#sign-up-form').show() })
   $('#sign-up-form').on('submit', authEvents.onSignUp)
+  $('#sign-in-form').hide()
+  $('#login-button').on('click', () => { $('#sign-in-form').show() })
   $('#sign-in-form').on('submit', authEvents.onSignIn)
+  $('#body-resource').hide()
   $('#change-pw-form').on('submit', authEvents.onChangePw)
   $('#sign-out-button').on('click', authEvents.onSignOut)
   $('#unit-input-form').on('submit', unitEvents.onUnitCreate)

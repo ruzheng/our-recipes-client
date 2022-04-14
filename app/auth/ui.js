@@ -41,7 +41,7 @@ const onChangePwFailure = function () {
 }
 
 const onSignOutSuccess = function () {
-  $('#auth-display').html('<p>Goodbye!</p>')
+  $('#auth-display').html('')
   $('#unit-display').html('')
   $('form').trigger('reset')
 }

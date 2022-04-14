@@ -26,7 +26,8 @@ const onSignIn = function (event) {
   authApi
     .signIn(data)
     .then((response) => authUi.onSignInSuccess(response))
-    // .then(onCreateGame)
+    .then(() => { $('#body-resource').show() })
+    .then(() => { $('#start-form').hide() })
     .catch(() => authUi.onSignInFailure)
   console.log(store.user)
 }
@@ -48,6 +49,9 @@ const onSignOut = function () {
   authApi
     .signOut()
     .then(() => authUi.onSignOutSuccess())
+    .then(() => { $('#body-resource').hide() })
+    .then(() => { $('#start-form').show() })
+    .then(() => { $('#sign-in-form').hide() })
     .catch(() => authUi.onSignUpFailure())
 }
 
@@ -57,4 +61,5 @@ module.exports = {
   onSignUp,
   onSignOut,
   onChangePw
+  // onLogin
 }

@@ -7,9 +7,9 @@ This light program allows the user to store their character units from the game 
 ## Important Links
 
   - Client repo
-  - API repo
+  - [API repo](https://github.com/ruzheng/genshin-api)
   - Deployed Client
-  - Deployed API
+  - [Deployed API](https://arcane-meadow-67008.herokuapp.com/)
 
 ***
 

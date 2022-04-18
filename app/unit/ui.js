@@ -1,14 +1,16 @@
 // const store = require('../store.js')
 
 const onUnitCreateSuccess = function () {
-  $('#auth-display').html('<p>Unit Created!</p>')
+  $('#resource-response').html('<p>Unit Created!</p>')
 
   $('form').trigger('reset')
   console.log('unit created')
 }
 
 const onUnitCreateFailure = function () {
-  $('#auth-display').html('<p>Error when creating unit</p>')
+  $('#resource-response').html(
+    '<p>Error when creating unit</p>'
+  )
 
   $('form').trigger('reset')
 }

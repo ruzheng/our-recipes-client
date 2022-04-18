@@ -3,7 +3,7 @@
     <head>
       <title>Genshin Character Tracker</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
@@ -12,11 +12,13 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
+      <div class = "start-parent">
       <div id="start-form">
         <h1>Genshin Unit Tracker</h1>
         <p>Hello Traveler of Tyvet, this is a Genshin unit tracker app that allows you to store your unit!</p>
         <p>Sign up to start!</p>
-        <button id="sign-up-button">Sign-Up</button>     
+        <button id="sign-up-button">Sign-Up</button>  
+        <p></p>   
         <form id="sign-up-form">
           <h3>Sign Up</h3>
           <input name="credentials[email]" type="email" placeholder="Enter Your Email">
@@ -34,12 +36,17 @@
           <input name="credentials[password]" type="password" placeholder="Password here">
           <button type="submit">Enter</button>
         </form>
+        <section class="auth-display"></section>
       </div>
       
 
-      <section id="auth-display"></section>
-
+      
+      </div>
+      
+      <div class = "body-container">
+       
       <div id="body-resource">
+        <section class="auth-display"></section>
         <h3>Change Password</h3>
         <form id="change-pw-form">
           <input name="passwords[old]" type="password" placeholder="Old password">
@@ -48,7 +55,9 @@
         </form>
         <h3>Sign Out</h3>
         <button id="sign-out-button">Sign Out</button>
+        <p></p>
         <div id="unit-input-box">
+            <h4>Enter Your Unit</h4>
           <form id="unit-input-form">
             <h6>Unit Name</h6>
             <input name="unit[name]" type="text" placeholder="Name">
@@ -60,16 +69,18 @@
             <input name="unit[region]" type="text" placeholder="1 of the 3 region">
             <p></p>
             <button type="submit">Submit</button>
+            <p></p>
           </form>
         </div>
 
         <section id="resource-response"></section>
+        <p></p>
         <button id="get-units">My Units</button>
-        
+        <p></p>
         <section id="unit-display"></section>
       </div>
       <p></p>
-
+      </div>
       
 
      

@@ -32,7 +32,7 @@ const onUnitUpdate = function (event) {
   const data = getFormFields(updateForm)
   // const data = getFormFields(event.target)
   // data.book.id = bookId
-  // console.log('what is going on here?' + data)
+
   unitApi
     .updateUnit(data, unitId)
     .then(() => unitUi.onUpdateUnitSuccess())

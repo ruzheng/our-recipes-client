@@ -16,7 +16,6 @@ const onUnitCreateFailure = function () {
 
 const onIndexUnitsSuccess = function (response) {
   let editUnitHtml = ''
-  console.log(response.units)
   if (response.units.length === 0) {
     $('#resource-response').html('<p>You have 0 Unit</p>')
     $('#unit-display').html('')

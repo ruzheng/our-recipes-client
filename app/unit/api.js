@@ -24,7 +24,6 @@ const indexUnits = function () {
 }
 
 const updateUnit = function (data, id) {
-  console.log(data)
   return $.ajax({
     method: 'PATCH',
     url: config.apiUrl + '/units/' + id,
@@ -36,7 +35,6 @@ const updateUnit = function (data, id) {
 }
 
 const deleteUnit = function (id) {
-  console.log(id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + '/units/' + id,

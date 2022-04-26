@@ -16,7 +16,6 @@ const onUnitsIndex = () => {
 const onUnitCreate = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log(data)
   unitApi
     .createUnit(data)
     .then(() => unitUi.onUnitCreateSuccess())
@@ -31,7 +30,6 @@ const onUnitUpdate = function (event) {
   const updateForm = event.target
   const unitId = $(updateForm).data('id')
   const data = getFormFields(updateForm)
-  console.log(unitId)
   // const data = getFormFields(event.target)
   // data.book.id = bookId
   // console.log('what is going on here?' + data)

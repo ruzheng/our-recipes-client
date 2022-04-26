@@ -4,7 +4,6 @@ const onUnitCreateSuccess = function () {
   $('#resource-response').html('<p>Unit Created!</p>')
 
   $('form').trigger('reset')
-  console.log('unit created')
 }
 
 const onUnitCreateFailure = function () {
@@ -17,12 +16,16 @@ const onUnitCreateFailure = function () {
 
 const onIndexUnitsSuccess = function (response) {
   let editUnitHtml = ''
-
-  response.units.forEach((unit) => {
+  console.log(response.units)
+  if (response.units.length === 0) {
+    $('#resource-response').html('<p>You have 0 Unit</p>')
+    $('#unit-display').html('')
+  } else {
+    response.units.forEach((unit) => {
     // booksHtml += '<li>' + book.title + '</li>'
     // booksHtml = booksHtml + '<li>' + book.title + '</li>'
 
-    editUnitHtml += `
+      editUnitHtml += `
                       <div>
                         <h5>${unit.name}</h6>
                         <p>Element: ${unit.element} <br>
@@ -38,9 +41,11 @@ const onIndexUnitsSuccess = function (response) {
                          <button class='delete-unit' data-id=${unit._id}>Delete Unit</button>
                       </div>
                     `
-  })
+    })
 
-  $('#unit-display').html(editUnitHtml)
+    $('#unit-display').html(editUnitHtml)
+    $('#resource-response').text('Unit index retrieved')
+  }
 }
 
 const onIndexUnitsFailure = function () {

@@ -12,7 +12,20 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <div class = "start-parent">
+
+    <header id="header">
+      <div id="change">
+        <button id="change-pw-button" type="click">Change Password</button>
+        <form id="change-pw-form">
+          <input name="passwords[old]" type="password" placeholder="Old password">
+          <input name="passwords[new]" type="password" placeholder="New password here">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+
+      <button id="sign-out-button">Sign Out</button>
+    </header>
+
       <div id="start-form">
         <h1>Genshin Unit Tracker</h1>
         <p>Hello Traveler of Tyvet, this is a Genshin unit tracker app that allows you to store your unit!</p>
@@ -37,24 +50,14 @@
           <button type="submit">Enter</button>
         </form>
         <section class="auth-display"></section>
+  
       </div>
+    
+      
       
 
-      
-      </div>
-      
-      <div class = "body-container">
-       
       <div id="body-resource">
         <section class="auth-display"></section>
-        <h3>Change Password</h3>
-        <form id="change-pw-form">
-          <input name="passwords[old]" type="password" placeholder="Old password">
-          <input name="passwords[new]" type="password" placeholder="New password here">
-          <button type="submit">Change Password</button>
-        </form>
-        <h3>Sign Out</h3>
-        <button id="sign-out-button">Sign Out</button>
         <p></p>
         <div id="unit-input-box">
             <h4>Enter Your Unit</h4>
@@ -80,7 +83,7 @@
         <section id="unit-display"></section>
       </div>
       <p></p>
-      </div>
+      
       
 
      

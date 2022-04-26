@@ -19,4 +19,7 @@ $(() => {
   $('#get-units').on('click', unitEvents.onUnitsIndex)
   $('#unit-display').on('submit', '.update-unit', unitEvents.onUnitUpdate)
   $('#unit-display').on('click', '.delete-unit', unitEvents.onUnitDelete)
+  $('#header').hide()
+  $('#change-pw-form').hide()
+  $('#change-pw-button').on('click', () => { $('#change-pw-form').show() })
 })

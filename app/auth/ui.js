@@ -6,7 +6,6 @@ const onSignUpSuccess = function () {
   $('.auth-display').html('<p>You signed up successfully!</p>')
 
   $('form').trigger('reset')
-  console.log('Signed up')
 }
 
 const onSignUpFailure = function () {
@@ -21,8 +20,6 @@ const onSignInSuccess = function (response) {
   $('.auth-display').html('<p>You signed in successfully!</p>')
   // store data from the response in my store object
   store.user = response.user
-  console.log(store.user._id)
-  console.log('User signed in')
 }
 
 const onSignInFailure = function () {

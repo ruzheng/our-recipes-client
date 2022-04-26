@@ -1,4 +1,4 @@
-# Genshin Unit Tracker API
+# Genshin Unit Tracker Client
 
 This is the front-end of Genshin Unit-Tracker
 

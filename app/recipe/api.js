@@ -1,10 +1,10 @@
 const config = require('../config')
 const store = require('../store')
 
-const createUnit = function (data) {
+const createRecipe = function (data) {
   return $.ajax({
     method: 'POST',
-    url: config.apiUrl + '/units',
+    url: config.apiUrl + '/recipes',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -12,10 +12,10 @@ const createUnit = function (data) {
   })
 }
 
-const indexUnits = function () {
+const indexRecipes = function () {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/units',
+    url: config.apiUrl + '/recipes',
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -23,10 +23,10 @@ const indexUnits = function () {
   })
 }
 
-const updateUnit = function (data, id) {
+const updateRecipe = function (data, id) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/units/' + id,
+    url: config.apiUrl + '/recipes/' + id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     },
@@ -34,10 +34,10 @@ const updateUnit = function (data, id) {
   })
 }
 
-const deleteUnit = function (id) {
+const deleteRecipe = function (id) {
   return $.ajax({
     method: 'DELETE',
-    url: config.apiUrl + '/units/' + id,
+    url: config.apiUrl + '/recipes/' + id,
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -45,8 +45,8 @@ const deleteUnit = function (id) {
 }
 
 module.exports = {
-  createUnit,
-  indexUnits,
-  updateUnit,
-  deleteUnit
+  createRecipe,
+  indexRecipes,
+  updateRecipe,
+  deleteRecipe
 }

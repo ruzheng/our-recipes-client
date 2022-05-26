@@ -42,7 +42,7 @@ rules:
   no-url-protocols: 0
   no-vendor-prefixes: 1
   no-warn: 1
-  property-units: 0
+  property-recipes: 0
 
   # Nesting
   declarations-before-nesting: 1
@@ -78,7 +78,7 @@ rules:
   shorthand-values: 1
   url-quotes: 1
   variable-for-property: 1
-  zero-unit: 1
+  zero-recipe: 1
 
   # Inner Spacing
   space-after-comma: 1

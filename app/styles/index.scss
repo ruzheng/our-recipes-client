@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url("app/styles/ventibg.jpeg");
+    background-image: url("app/styles/foodbg.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -60,6 +60,11 @@ header {
     justify-content: left;
 }
 
+#sign-out-button {
+    margin-left: 10px;
+}
+
 #change-pw-form {
     padding-left: 5px;
 }
+

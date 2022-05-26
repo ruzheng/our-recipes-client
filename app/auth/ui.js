@@ -39,7 +39,7 @@ const onChangePwFailure = function () {
 
 const onSignOutSuccess = function () {
   $('.auth-display').html('')
-  $('#unit-display').html('')
+  $('#recipe-display').html('')
   $('#resource-response').html('')
   $('form').trigger('reset')
 }

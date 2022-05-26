@@ -14,8 +14,10 @@
     <body>
 
     <header id="header">
+      <div id="nav-button">
       <button id="get-recipes">My recipes</button>
       <button id="create-recipe">Create recipes</button>
+      </div>
       <div id="change">
         <button id="change-pw-button" type="click">Change Password</button>
         <form id="change-pw-form">
@@ -75,10 +77,12 @@
             </select>
             <!-- <input name="recipe[cooktime]" type="text" placeholder="Cook Time"> -->
             <h6>Description</h6>
-            <textarea id="description-box" name="recipe[direction]" placeholder="Summary of your recipe" style="height:100px; width: 350px;" type="text"></textarea>
+            <textarea id="description-box" name="recipe[direction]" placeholder="Description of your dish" style="height:100px; width: 350px;" type="text"></textarea>
             <!-- <input id="description-box" name="recipe[direction]" type="text" placeholder="Summary of your recipe"> -->
             <h6>Ingredients</h6>
-            <input name="recipe[ingredients]" type="text" placeholder="Ingredients separate by comma">
+            <textarea id="ingredients-box" name="recipe[ingredients]" placeholder="Ingredients separate by comma"
+              style="height:100px; width: 350px;" type="text"></textarea>
+            <!-- <input name="recipe[ingredients]" type="text" placeholder="Ingredients separate by comma"> -->
             <p></p>
             <button type="submit">Submit</button>
             <p></p>

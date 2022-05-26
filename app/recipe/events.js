@@ -7,10 +7,13 @@ const recipeApi = require('./api.js')
 const getFormFields = require('../../lib/get-form-fields.js')
 
 const onRecipesIndex = () => {
+  $('#body-resource').hide()
+  $('#recipe-display').show()
   recipeApi
     .indexRecipes()
     .then((response) => recipeUi.onIndexRecipesSuccess(response))
-    .then(() => { $('#body-resource').hide() })
+    // .then(() => { $('#recipe-display').show() })
+    // .then(() => { $('#body-resource').hide() })
     .catch(() => recipeUi.onIndexRecipesFailure())
 }
 

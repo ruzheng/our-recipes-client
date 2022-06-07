@@ -13,6 +13,7 @@ $(() => {
   $('#login-button').on('click', () => { $('#sign-in-form').show() })
   $('#sign-in-form').on('submit', authEvents.onSignIn)
   $('#body-resource').hide()
+  $('#recipe-display').hide()
   $('#create-recipe').on('click', () => {
     $('#recipe-display').hide()
     $('#body-resource').show()

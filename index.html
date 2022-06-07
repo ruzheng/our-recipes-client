@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Our Recipe</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+
+    <header id="header">
+      <div id="nav-button">
+      <button id="get-recipes">My recipes</button>
+      <button id="create-recipe">Create recipes</button>
+      </div>
+      <div id="change">
+        <button id="change-pw-button" type="click">Change Password</button>
+        <form id="change-pw-form">
+          <input name="passwords[old]" type="password" placeholder="Old password">
+          <input name="passwords[new]" type="password" placeholder="New password here">
+          <button type="submit">Submit</button>
+        </form>
+        <button id="sign-out-button">Sign Out</button>
+      </div>
+      
+      <!-- <button id="sign-out-button">Sign Out</button> -->
+    </header>
+
+      <div id="start-form">
+        <h1>Our Recipe</h1>
+        <p>Ready to share your recipe with the world?</p>
+        <p>Sign up to start!</p>
+        <button id="sign-up-button">Sign-Up</button>  
+        <p></p>   
+        <form id="sign-up-form">
+          <h3>Sign Up</h3>
+          <input name="credentials[email]" type="email" placeholder="Enter Your Email">
+          <input name="credentials[password]" type="password" placeholder="Enter Password">
+          <input name="credentials[password_confirmation]" type="password" placeholder="Confirm Password">
+          <button type="submit">Join</button>
+        </form>
+
+        <p>Have an account already? Login here.</p>
+        <button id="login-button">Login</button>
+        
+        <form id="sign-in-form">
+          <h3>Sign In</h3>
+          <input name="credentials[email]" type="email" placeholder="Email address here">
+          <input name="credentials[password]" type="password" placeholder="Password here">
+          <button type="submit">Enter</button>
+        </form>
+        <section class="auth-display"></section>
+  
+      </div>
+    
+      
+      
+
+      <div id="body-resource">
+        <section class="auth-display"></section>
+        <p></p>
+        <div id="recipe-input-box">
+            <h4>Enter Your Recipe</h4>
+          <form id="recipe-input-form">
+            <h6>Recipe Name</h6>
+            <input name="recipe[name]" type="text" placeholder="Recipe Name">
+            <h6>Cook Time</h6>
+            <select name="recipe[cooktime]" type="text" placeholder="Cook Time">
+              <option value="20 Minutes">20 Minutes</option>
+              <option value="40 Minutes">40 Minutes</option>
+              <option value="60 Minutes">60 Minutes</option>
+            </select>
+            <!-- <input name="recipe[cooktime]" type="text" placeholder="Cook Time"> -->
+            <h6>Description</h6>
+            <textarea id="description-box" name="recipe[direction]" placeholder="Description of your dish" style="height:100px; width: 350px;" type="text"></textarea>
+            <!-- <input id="description-box" name="recipe[direction]" type="text" placeholder="Summary of your recipe"> -->
+            <h6>Ingredients</h6>
+            <textarea id="ingredients-box" name="recipe[ingredients]" placeholder="Ingredients separate by comma"
+              style="height:100px; width: 350px;" type="text"></textarea>
+            <!-- <input name="recipe[ingredients]" type="text" placeholder="Ingredients separate by comma"> -->
+            <p></p>
+            <button type="submit">Submit</button>
+            <p></p>
+          </form>
+        </div>
+
+        <section id="resource-response"></section>
+        <p></p>
+        <!-- <button id="get-recipes">My recipes</button> -->
+        <p></p>
+        <!-- <section id="recipe-display"></section> -->
+      </div>
+      <section id="recipe-display"></section>
+      
+      
+      
+
+     
+    </body>
+</html>
